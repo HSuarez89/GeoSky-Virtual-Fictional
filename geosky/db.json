@@ -2,7 +2,8 @@
     "pilot": [
         {
             "name": "Henrique Suarez Siqueira",
-            "hours": "0"
+            "hours": "0",
+            "location": 1
         }
     ],
     "airports": [
