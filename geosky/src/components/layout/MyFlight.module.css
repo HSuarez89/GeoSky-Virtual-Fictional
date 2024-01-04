@@ -1,0 +1,21 @@
+.div_container{
+    width: 100vw;
+}
+
+.card_container{
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+.text{
+    font-size: 1.2em;
+}
+.text h1{
+    color: #093C75;
+    padding: 50px;
+}
+.text p{
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
