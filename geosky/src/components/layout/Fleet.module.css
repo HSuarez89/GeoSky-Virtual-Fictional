@@ -1,0 +1,16 @@
+.text{
+    font-size: 1.2em;
+}
+.text h1{
+    color: #093C75;
+    padding: 50px;
+}
+.text p{
+    width: 90%;
+    padding: 10px;
+    margin: auto;
+}
+.text img{
+    display: flex;
+    margin: auto;
+}
