@@ -1,13 +1,15 @@
 import profilepic from "../../img/Perfil.jpg"
 import styles from "./PilotCard.module.css"
 
-function PilotCard(){
+function PilotCard({name, hours, location, handleReset}){
+
+
     return(
         <div className={styles.pilot_card}>
             <img src={profilepic} alt="Profile"></img>
-            <p><span>Name:</span></p>
-            <p><span>Flight Hours:</span></p>
-            <p><span>Location:</span></p>
+            <p><span>Name:</span> {name}</p>
+            <p><span>Flight Hours:</span> {hours}</p>
+            <p><span>Location:</span> {location}</p>
         </div>
     )
 }
