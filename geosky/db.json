@@ -28,5 +28,7 @@
             "icao": "ZHCC",
             "iata": "CGO"
         }
-    ]
+    ],
+    "bids": [],
+    "log": []
 }

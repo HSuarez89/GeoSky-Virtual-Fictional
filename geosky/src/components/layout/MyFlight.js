@@ -1,6 +1,7 @@
 import PilotCard from "./PilotCard"
 import styles from "./MyFlight.module.css"
 import {useState, useEffect} from "react"
+import Options from "../options/Options"
 
 function MyFlight(){
     const [pilot, setPilot] = useState([])
@@ -51,6 +52,16 @@ function MyFlight(){
                     hours={pilot.hours}
                     />
                 )}
+            </div>
+            <div className={styles.text}>
+                <h1>Next Flight</h1>
+                <p>Here you can bid your next flight:</p>
+                <p><span>From: </span>{airport}</p>
+                <p><span>To: </span></p>
+                
+            </div>
+            <div className={styles.text}>
+                <h1>Log</h1>
             </div>
         </div>
     )
