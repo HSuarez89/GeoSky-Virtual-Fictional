@@ -21,7 +21,7 @@ function Options({originLocation, onSelect}){
     
     const handleSelectChange = (e) => {
         setIsOptionSelected(true)
-        setSelectedOption(() => e.target.value)
+        setSelectedOption(e.target.value)
     }
 
     useEffect(() => {
