@@ -7,7 +7,9 @@ function MyFlight(){
     const [pilot, setPilot] = useState([])
     const [airport, setAirport] = useState([])
     const [airportId, setAirportId] = useState([])
-    const [selectedDestination, setSelectedDestination] = useState([])
+    const [selectedDestination, setSelectedDestination] = useState('')
+    const [origin, setOrigin] = useState([])
+    const [destination, setDestination] = useState({})
 
     useEffect(() => {
         fetch(`http://localhost:5000/pilot`, {
@@ -35,14 +37,47 @@ function MyFlight(){
         .then((resp) => resp.json())
         .then((data) => {
             setAirport(data.city)
+            setOrigin(data)
         })
         .catch((err) => console.log(err))
     },[airportId])
 
     const handleDestinationSelect = (destination) => {
         setSelectedDestination(destination)
-        console.log(selectedDestination)
     }
+
+    function bidFlight(){
+        fetch(`http://localhost:5000/airports/`, {
+            method: "GET",
+            headers: {'Content-Type': 'application/json'}
+        })
+        .then((resp) => resp.json())
+        .then((data) => {
+                setDestination(data)
+                const destinationExists = data.find(item => item.name === selectedDestination)
+                if(destinationExists){
+                    setDestination(destinationExists)
+                }
+        })
+        .catch((err) => console.log(err))
+
+        const bidContent = {
+            origin: origin,
+            destination: destination
+        }
+
+        fetch('http://localhost:5000/bids', {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(bidContent)
+        }).then((resp) => resp.json())
+        .then((data) => {
+
+        })
+        .catch((err) => console.log(err))
+    }
+
+    
 
     return(
         <div className={styles.div_container}>
@@ -66,7 +101,8 @@ function MyFlight(){
                 <p><span>From: </span>{airport}</p>
                 <div className={styles.select_container}>
                     <p><span>To: </span></p>
-                    <Options originLocation={airportId} onDestinationSelected={handleDestinationSelect}/>
+                    <Options originLocation={airportId} onSelect={handleDestinationSelect}/>
+                    <button onClick={bidFlight}>Bid</button>
                 </div>
             </div>
             <div className={styles.text}>

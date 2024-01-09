@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-function Options({originLocation, onDestinationSelected}){
+function Options({originLocation, onSelect}){
 
     const [option, setOption] = useState([])
     const [selectedOption, setSelectedOption] = useState([])
@@ -20,14 +20,13 @@ function Options({originLocation, onDestinationSelected}){
     },[originLocation])
     
     const handleSelectChange = (e) => {
-        setSelectedOption(e.target.value);
-        setIsOptionSelected(true);
+        setIsOptionSelected(true)
+        setSelectedOption(() => e.target.value)
     }
-    const setDestination = () => {
-        if(isOptionSelected){
-            onDestinationSelected(selectedOption)
-        }
-    }
+
+    useEffect(() => {
+        onSelect(selectedOption)
+    }, [selectedOption, onSelect])
 
     return(
         <>
@@ -40,7 +39,6 @@ function Options({originLocation, onDestinationSelected}){
                     )
                 ))}
             </select>
-            <button onClick={() => setDestination()}>Bid</button>
         </>
     )
 }

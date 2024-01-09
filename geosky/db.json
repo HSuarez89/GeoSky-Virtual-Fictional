@@ -1,34 +1,46 @@
 {
-    "pilot": [
-        {
-            "name": "Henrique Suarez Siqueira",
-            "hours": "0",
-            "location": 1
-        }
-    ],
-    "airports": [
-        {
-            "id": 1,
-            "name": "Shota Rustaveli",
-            "city": "Tiblisi Internacional Airport",
-            "icao": "UGTB",
-            "iata": "TBS"
-        },
-        {
-            "id": 2,
-            "name": "Flughafen Frankfurt Main",
-            "city": "Frankfurt Internacional Airport",
-            "icao": "EDDF",
-            "iata": "FRA"
-        },
-        {
-            "id": 3,
-            "name": "Xinzheng",
-            "city": "Zhengzhou International Airport",
-            "icao": "ZHCC",
-            "iata": "CGO"
-        }
-    ],
-    "bids": [],
-    "log": []
+  "pilot": [
+    {
+      "name": "Henrique Suarez Siqueira",
+      "hours": "0",
+      "location": 1
+    }
+  ],
+  "airports": [
+    {
+      "id": 1,
+      "name": "Shota Rustaveli",
+      "city": "Tiblisi Internacional Airport",
+      "icao": "UGTB",
+      "iata": "TBS"
+    },
+    {
+      "id": 2,
+      "name": "Flughafen Frankfurt Main",
+      "city": "Frankfurt Internacional Airport",
+      "icao": "EDDF",
+      "iata": "FRA"
+    },
+    {
+      "id": 3,
+      "name": "Xinzheng",
+      "city": "Zhengzhou International Airport",
+      "icao": "ZHCC",
+      "iata": "CGO"
+    }
+  ],
+  "bids": [
+    {
+      "origin": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "destination": {},
+      "id": 1
+    }
+  ],
+  "log": []
 }
