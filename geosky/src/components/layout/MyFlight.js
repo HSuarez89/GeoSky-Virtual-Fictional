@@ -41,6 +41,7 @@ function MyFlight(){
 
     const handleDestinationSelect = (destination) => {
         setSelectedDestination(destination)
+        console.log(selectedDestination)
     }
 
     return(
