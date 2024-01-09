@@ -7,6 +7,7 @@ function MyFlight(){
     const [pilot, setPilot] = useState([])
     const [airport, setAirport] = useState([])
     const [airportId, setAirportId] = useState([])
+    const [selectedDestination, setSelectedDestination] = useState([])
 
     useEffect(() => {
         fetch(`http://localhost:5000/pilot`, {
@@ -37,6 +38,11 @@ function MyFlight(){
         })
         .catch((err) => console.log(err))
     },[airportId])
+
+    const handleDestinationSelect = (destination) => {
+        setSelectedDestination(destination)
+    }
+
     return(
         <div className={styles.div_container}>
             <div className={styles.text}>
@@ -57,8 +63,10 @@ function MyFlight(){
                 <h1>Next Flight</h1>
                 <p>Here you can bid your next flight:</p>
                 <p><span>From: </span>{airport}</p>
-                <p><span>To: </span></p>
-                
+                <div className={styles.select_container}>
+                    <p><span>To: </span></p>
+                    <Options originLocation={airportId} onDestinationSelected={handleDestinationSelect}/>
+                </div>
             </div>
             <div className={styles.text}>
                 <h1>Log</h1>

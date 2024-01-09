@@ -22,3 +22,24 @@
 .text span{
     font-weight: 800;
 }
+.select_container{
+    display: flex;
+    width: 90%;
+    margin: auto;
+}
+.select_container p{
+    width: auto;
+    margin: 0;
+}
+.select_container button{
+    padding: 0px 50px;
+    border: none;
+    background-color: #093C75;
+    color: white;
+    font-size: 1.1em;
+}
+.select_container button:hover{
+    cursor: pointer;
+    background-color: #A11619;
+    transition: 0.5s;
+}
