@@ -1,6 +1,8 @@
 import PilotCard from "./PilotCard"
 import styles from "./MyFlight.module.css"
+import Select from "./Select"
 import {useState, useEffect} from "react"
+import Button from "./Button"
 
 
 function MyFlight(){
@@ -9,6 +11,9 @@ function MyFlight(){
     const [locationId, setLocationId] = useState([])
     const [pilotLocation, setPilotLocation] = useState([])
     const [airportName, setAirportName] = useState([])
+    const [options, setOptions] = useState([])
+    const [destinationId, setDestinationId] = useState('')
+    const [destination, setDestination] = useState([])
 
     useEffect(() => {
         fetch('http://localhost:5000/pilot', {
@@ -38,6 +43,46 @@ function MyFlight(){
         })
     },[locationId])
 
+    useEffect(() => {
+        fetch('http://localhost:5000/airports', {
+            method: "GET",
+            headers: {'Content-Type': 'application/json'}
+        }).then((resp) => resp.json())
+        .then((data) => {
+            const filterData = data.filter(item => item.id !== locationId)
+            setOptions(filterData)
+        })
+    },[locationId])
+
+    useEffect(() => {
+        console.log(options)
+    },[options])
+
+    function changeDestination(e){
+        setDestinationId(e.target.value)
+    }
+
+    useEffect(() => {
+        fetch(`http://localhost:5000/airports/${destinationId}`, {
+            method: "GET",
+            headers: {'Content-Type': 'application/json'}
+        }).then((resp) => resp.json())
+        .then((data) => {
+            setDestination(data)
+        })
+        .catch((err) => console.log(err))
+    }, [destinationId])
+
+    function bidFlight(pilotLocation, destination){
+        fetch('http://localhost:5000/bids', {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({pilotLocation, destination })
+        }).then((resp) => resp.json())
+        .then((data) => console.log(data))
+        .catch((err) => console.log(err))
+    }
+
     return(
         <div className={styles.div_container} >
             <div className={styles.text}>
@@ -52,6 +97,15 @@ function MyFlight(){
                             flights={pilot.flights}
                         />
                     )}
+                </div>
+                <div>
+                    <h1>Bid Flight</h1>
+                    <p><span>From: </span>{pilotLocation.city}</p>
+                    <div className={styles.select_container}>
+                        <p><span>To: </span></p>
+                        <Select name='airport_id' options={options} handleOnChange={changeDestination} value={destinationId}/>
+                        <Button text='Bid Flight' buttonClass='bid' handle={() => bidFlight(destination, pilotLocation)}/>
+                    </div>
                 </div>
             </div>
         </div>

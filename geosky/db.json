@@ -30,7 +30,23 @@
     }
   ],
   "bids": [
-    
+    {
+      "pilotLocation": {
+        "id": 2,
+        "name": "Flughafen Frankfurt Main",
+        "city": "Frankfurt Internacional Airport",
+        "icao": "EDDF",
+        "iata": "FRA"
+      },
+      "destination": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 1
+    }
   ],
   "log": []
 }
