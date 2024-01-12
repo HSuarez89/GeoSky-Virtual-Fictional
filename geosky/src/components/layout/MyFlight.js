@@ -44,6 +44,10 @@ function MyFlight(){
     },[locationId])
 
     useEffect(() => {
+        console.log(pilotLocation)
+    },[pilotLocation])
+
+    useEffect(() => {
         fetch('http://localhost:5000/airports', {
             method: "GET",
             headers: {'Content-Type': 'application/json'}
@@ -54,9 +58,6 @@ function MyFlight(){
         })
     },[locationId])
 
-    useEffect(() => {
-        console.log(options)
-    },[options])
 
     function changeDestination(e){
         setDestinationId(e.target.value)
@@ -77,7 +78,7 @@ function MyFlight(){
         fetch('http://localhost:5000/bids', {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({pilotLocation, destination })
+            body: JSON.stringify({pilotLocation, destination})
         }).then((resp) => resp.json())
         .then((data) => console.log(data))
         .catch((err) => console.log(err))
