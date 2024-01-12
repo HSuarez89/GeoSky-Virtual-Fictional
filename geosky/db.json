@@ -29,6 +29,194 @@
       "iata": "CGO"
     }
   ],
-  "bids": [],
+  "bids": [
+    {
+      "destination": {
+        "id": 2,
+        "name": "Flughafen Frankfurt Main",
+        "city": "Frankfurt Internacional Airport",
+        "icao": "EDDF",
+        "iata": "FRA"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 1
+    },
+    {
+      "destination": {
+        "id": 2,
+        "name": "Flughafen Frankfurt Main",
+        "city": "Frankfurt Internacional Airport",
+        "icao": "EDDF",
+        "iata": "FRA"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 2
+    },
+    {
+      "destination": {
+        "id": 3,
+        "name": "Xinzheng",
+        "city": "Zhengzhou International Airport",
+        "icao": "ZHCC",
+        "iata": "CGO"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 3
+    },
+    {
+      "destination": {
+        "id": 3,
+        "name": "Xinzheng",
+        "city": "Zhengzhou International Airport",
+        "icao": "ZHCC",
+        "iata": "CGO"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 4
+    },
+    {
+      "destination": {
+        "id": 3,
+        "name": "Xinzheng",
+        "city": "Zhengzhou International Airport",
+        "icao": "ZHCC",
+        "iata": "CGO"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 5
+    },
+    {
+      "destination": {
+        "id": 2,
+        "name": "Flughafen Frankfurt Main",
+        "city": "Frankfurt Internacional Airport",
+        "icao": "EDDF",
+        "iata": "FRA"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 6
+    },
+    {
+      "destination": {
+        "id": 3,
+        "name": "Xinzheng",
+        "city": "Zhengzhou International Airport",
+        "icao": "ZHCC",
+        "iata": "CGO"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 7
+    },
+    {
+      "destination": {
+        "id": 2,
+        "name": "Flughafen Frankfurt Main",
+        "city": "Frankfurt Internacional Airport",
+        "icao": "EDDF",
+        "iata": "FRA"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 8
+    },
+    {
+      "destination": {
+        "id": 3,
+        "name": "Xinzheng",
+        "city": "Zhengzhou International Airport",
+        "icao": "ZHCC",
+        "iata": "CGO"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 9
+    },
+    {
+      "destination": {
+        "id": 2,
+        "name": "Flughafen Frankfurt Main",
+        "city": "Frankfurt Internacional Airport",
+        "icao": "EDDF",
+        "iata": "FRA"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 10
+    },
+    {
+      "destination": {
+        "id": 2,
+        "name": "Flughafen Frankfurt Main",
+        "city": "Frankfurt Internacional Airport",
+        "icao": "EDDF",
+        "iata": "FRA"
+      },
+      "pilotLocation": {
+        "id": 1,
+        "name": "Shota Rustaveli",
+        "city": "Tiblisi Internacional Airport",
+        "icao": "UGTB",
+        "iata": "TBS"
+      },
+      "id": 11
+    }
+  ],
   "log": []
 }

@@ -32,3 +32,9 @@
     width: auto;
     margin: 0;
 }
+
+.div_bid_flight{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}

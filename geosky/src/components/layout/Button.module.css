@@ -1,0 +1,11 @@
+.bid{
+    color: white;
+    background-color: #093C75;
+    border: none;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 0.9em;
+    height: 40px;
+    width: 150px;
+}
